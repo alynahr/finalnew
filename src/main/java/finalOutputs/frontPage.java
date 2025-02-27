@@ -135,9 +135,9 @@ public class frontPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        String Username = jTextField1.getText();
-        String Password = String.valueOf(jPasswordField1.getPassword());
-        if (Username.equals ("fullname") && Password.equals ("/n")) {
+        String username = jTextField1.getText();
+        String password = String.valueOf(jPasswordField1.getPassword());
+        if (userDataBase.isValidUser(username, password)) {
             jLabel3.setText("login successful!");
             mainPage jButton1 = new mainPage();
             jButton1.show();
